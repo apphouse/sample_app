@@ -7,8 +7,18 @@ gem 'rails', '3.0.0'
 
 gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
 
+# rspec-rails 2.0.1 failing on my test with 
+#1) PagesController GET 'home' should have the right title
+#    Failure/Error: response.should have_selector("title",
+#    undefined method `has_selector?' for #<ActionController::TestResponse:0x00000102e4c980>
+#group :development do
+#  gem 'rspec-rails', '2.0.1'
+#  gem 'annotate-models', '1.0.4'
+#end
+
 group :development do
   gem 'rspec-rails', '2.0.0.beta.18'
+  gem 'annotate-models', '1.0.4'
 end
 
 group :test do
